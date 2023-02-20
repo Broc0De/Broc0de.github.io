@@ -30,7 +30,7 @@ const iphones = [
 
 // Iphone List
 const iphoneList = document.getElementById('apple-list');
-function displayCars(_iphones) {
+function displayIphones(_iphones) {
 	iphoneList.innerHTML = '';
 	iphones.forEach((Iphone) => {
 		const iphoneEl = document.createElement('div');
@@ -45,6 +45,6 @@ function displayCars(_iphones) {
 }
 
 // Initial Display
-displayCars(iphones);
+displayIphones(iphones);
 
 
