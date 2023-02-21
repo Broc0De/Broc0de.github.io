@@ -1,3 +1,5 @@
+const Apple= document.getElementById("apple-list");
+
 // Ipnone Array
 const iphones = [
 	{
@@ -29,22 +31,23 @@ const iphones = [
 ];
 
 // Iphone List
-const iphoneList = document.getElementById('apple-list');
-function displayIphones(_iphones) {
-	iphoneList.innerHTML = '';
-	iphones.forEach((Iphone) => {
-		const iphoneEl = document.createElement('div');
-		iphoneEl.classList.add('Iphone');
-		iphoneEl.innerHTML = `
-			<img src="${Iphone.image}" alt="${Iphone.make} ${Iphone.model}">
-			<h3>${Iphone.make} ${Iphone.model}</h3>
-			<p>Цена: ${Iphone.price} тенге</p>
-		`;
-		iphoneList.appendChild(iphoneEl);
-	});
-}
 
-// Initial Display
-displayIphones(iphones);
+  
+  
+let appleHTML = "";
+
+iphones.forEach(iphone => {
+	appleHTML += `
+		<div class="Iphone">
+			<img src="${iphone.image}">
+			<h3>${iphone.model}</h3>
+			<p>$${iphone.price}</p>
+			<p>${iphone.make}</p>
+		</div>
+	`;
+});
+
+Apple.innerHTML = appleHTML;
+
 
 
